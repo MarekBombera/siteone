@@ -1,4 +1,5 @@
-import { ADD_COURSE, ALL_COURSES, REMOVE_COURSE } from './coursesActions'
+import { AnyAction } from 'redux-saga'
+import { ADD_COURSE, ALL_COURSES, CoursesActions, REMOVE_COURSE } from './coursesActions'
 
 export const initialState = {
   courses: ['java', 'free-code-camp', 'ten-days-of-javascript']
@@ -6,7 +7,8 @@ export const initialState = {
 
 export type Courses = typeof initialState['courses']
 
-const coursesReducer = (state = initialState, action) => {
+// Wasn't able to type action correctly
+const coursesReducer = (state = initialState, action: CoursesActions | AnyAction) => {
   switch (action.type) {
     case ALL_COURSES:
       return {...state}
@@ -18,7 +20,7 @@ const coursesReducer = (state = initialState, action) => {
     case ADD_COURSE:
       return {
         ...state,
-        courses: [...state.courses, action.payload],
+        courses: [...state.courses, ...action.payload],
       }
     default:
       return state
