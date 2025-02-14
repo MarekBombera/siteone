@@ -20,7 +20,7 @@ const coursesReducer = (state = initialState, action: CoursesActions | AnyAction
     case ADD_COURSE:
       return {
         ...state,
-        courses: [...state.courses, ...action.payload],
+        courses: [...state.courses, action.payload],
       }
     default:
       return state
