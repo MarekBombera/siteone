@@ -4,16 +4,13 @@ import styles from './Video.module.scss'
 import VideoPlayer from '../VideoPlayer/VideoPlayer'
 
 const Video = ({
-  video,
   toggleCompleted,
   isCompleted,
   toggleOpen,
   isOpen,
-  isDisplayed,
   id,
   title,
   description,
-  thumbnail,
 }) => {
   return (
     <>
@@ -31,7 +28,7 @@ const Video = ({
             <h2 className={styles['video__title']}>{title}</h2>
             {isOpen && (
               <Collapse open={isOpen}>
-                <VideoPlayer url={`https://www.youtube.com/watch?v=${id}`} />
+                <VideoPlayer url={`https://www.youtube.com/watch?v=${id}`} onEnded={toggleCompleted} />
                 <p className={styles['video__description']}>{description}</p>
               </Collapse>
             )}
