@@ -7,7 +7,7 @@ export const initialState = {
 
 export type Courses = typeof initialState['courses']
 
-// Wasn't able to type action correctly
+// Wasn't able to type action correctly wouldn't use Any in production
 const coursesReducer = (state = initialState, action: CoursesActions | AnyAction) => {
   switch (action.type) {
     case ALL_COURSES:

@@ -5,7 +5,6 @@ import styles from './Navigation.module.scss'
 import { useSelector } from "react-redux";
 import { RootState } from "@/modules/course/store";
 
-
 const Navigation: FC = () => {
   const courses = useSelector((state: RootState) => state.homePage.courses);
 
