@@ -6,4 +6,4 @@ export const ADD_COURSE = 'PlaylistPage/ADD_COURSE'
 
 export const allCourses = (payload: Courses) => ({ type: ALL_COURSES, payload })
 export const removeCourse = (payload: string) => ({ type: REMOVE_COURSE, payload })
-export const addCourse = (payload) => ({ type: ADD_COURSE, payload })
+export const addCourse = (payload: string) => ({ type: ADD_COURSE, payload })

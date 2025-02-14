@@ -16,7 +16,10 @@ const coursesReducer = (state = initialState, action) => {
         courses: state.courses.filter((course) => course !== action.payload),
       }
     case ADD_COURSE:
-      return {...state}
+      return {
+        ...state,
+        courses: [...state.courses, action.payload],
+      }
     default:
       return state
   }
