@@ -1,4 +1,4 @@
-import { Courses } from "./courses-reducer"
+import { Courses } from "./coursesReducer"
 
 export const ALL_COURSES = 'PlaylistPage/ALL_COURSES'
 export const REMOVE_COURSE = 'PlaylistPage/REMOVE_COURSE'

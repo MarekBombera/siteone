@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import playlistsReducer from './reducer'
-import coursesReducer from './courses-reducer';
+import coursesReducer from './coursesReducer';
 import createSagaMiddleware from "redux-saga";
 import { all } from "redux-saga/effects";
 

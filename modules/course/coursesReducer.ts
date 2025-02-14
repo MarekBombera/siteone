@@ -1,4 +1,4 @@
-import { ADD_COURSE, ALL_COURSES, REMOVE_COURSE } from './courses-actions'
+import { ADD_COURSE, ALL_COURSES, REMOVE_COURSE } from './coursesActions'
 
 export const initialState = {
   courses: ['java', 'free-code-camp', 'ten-days-of-javascript']

@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import CoursesListItem from "./CoursesListItem";
 import { RootState } from "@/modules/course/store";
-import { removeCourse } from "@/modules/course/courses-actions";
+import { removeCourse } from "@/modules/course/coursesActions";
 
 const CoursesList: React.FC = () => {
   const courses = useSelector((state: RootState) => state.homePage.courses);
